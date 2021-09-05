@@ -1,17 +1,22 @@
+// 設定データの型定義
 import { RouteType } from "../types/RouteType";
+
+// ページコンポーネント
 import { Top } from "../../Top";
-import { usersRoute } from "./usersRoute";
 import { Page404 } from "../../Page404";
 
+// ネストの設定データ
+import { usersRoute } from "./usersRoute";
+
 export const rootRoute: Array<RouteType> = [
-  // path: string　パス名(ルートの場合'/'と書く),
+  // path: string　パス名
 
-  // exact: boolean pathの一致条件[true=完全一致, false=部分一致],
-  // childrenにRoute配列を入れる場合は必ずfalseを入れること
+  // exact: boolean
+  // childrenにArray<RouteTypes>型のデータを入れる場合、必ずfalseを入れること
 
-  // children: ReactNode | Array<RouteTypes> ReactコンポーネントまたはRoute配列
-  // Reactコンポーネントを入れた場合は、pathを基にルート定義する
-  // Route配列を入れた場合は、pathに対してネストのルートを定義することができる
+  // children: ReactNode | Array<RouteTypes> 
+  // ReactNode型のデータを入れた場合、pathを基にページを設定する
+  // Array<RouteTypes>型のデータを入れた場合、pathに対してネストを設定する
 
   {
     path: "/",
